@@ -47,7 +47,7 @@ is_reload_av02 = False
 is_reload_av03 = False
 MY_GITHUB_TOKEN = os.getenv("MY_GITHUB_TOKEN") if os.getenv("MY_GITHUB_TOKEN") else ""
 TOKEN2 = os.getenv("TOKEN2") if os.getenv("TOKEN2") else ""
-REPO_OWNER = "tanlang003"
+REPO_OWNER = "tanlang004"
 REPO_NAME = "danmu_server"
 WORKFLOW_FILE = os.getenv("WORKFLOW_FILE") if os.getenv("WORKFLOW_FILE") else "danmu.yaml"
 
