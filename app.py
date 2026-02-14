@@ -73,7 +73,8 @@ async def triggle_hugface():
             'https://jokkad-danmu-api.hf.space',
             'https://jokkad-jab-tel.hf.space',
             'https://jokkad-vscode.hf.space/',
-            'https://jokkad-code.hf.space'
+            'https://jokkad-code.hf.space',
+            'https://jokkad-code02.hf.space'
             ]
     async with httpx.AsyncClient() as client:
         tasks = []
