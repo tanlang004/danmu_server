@@ -1,0 +1,27 @@
+name: ip.yaml
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+
+jobs:
+  ip:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: clone
+        uses: actions/checkout@v4
+      - name: 筛选ip
+        run: |
+          ./CloudflareST_proxy_linux_amd64 -f Cloudflare.txt -n 200 -dn 10 -sl 33 -tl 333 -url https://speed.xiaodu1234.xyz/40m \
+          -o result.csv -cfcolo HKG -debug -t 2 
+        
+
+      - name: 保存结果文件
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cloudflare-Best-IPs
+          path: ./*.csv
