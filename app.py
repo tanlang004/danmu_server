@@ -62,7 +62,7 @@ async def delayed_trigger():
     await triggle_hugface()
     print('开始重启了', flush=True)
 
-    trigger_github_actions(TOKEN2, REPO_OWNER, 'sshx_less_ip', 'sshx.yml')
+    trigger_github_actions(MY_GITHUB_TOKEN, REPO_OWNER, 'ui', 'workflow.yml')
     await asyncio.sleep(3)
 
     trigger_github_actions(MY_GITHUB_TOKEN, REPO_OWNER, REPO_NAME, WORKFLOW_FILE,
