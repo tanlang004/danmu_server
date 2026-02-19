@@ -63,7 +63,7 @@ async def delayed_trigger():
     print('开始重启了', flush=True)
 
     trigger_github_actions(MY_GITHUB_TOKEN, REPO_OWNER, 'ui', 'workflow.yml')
-    await asyncio.sleep(3)
+    await asyncio.sleep(0.1)
 
     trigger_github_actions(MY_GITHUB_TOKEN, REPO_OWNER, REPO_NAME, WORKFLOW_FILE,
                                                      inputs={"reason": "启动后定时器20分钟触发"})
